@@ -22,6 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 } else {
     // Redirection si le formulaire n'est pas soumis
-    header("Location: /contact.html");
+    header("https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/contact.html");
 }
 ?>
