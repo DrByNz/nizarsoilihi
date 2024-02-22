@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIZAR SOILIHI</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        var lienQuiSuisJe = document.getElementById("lien-qui-suis-je");
+        var sousMenu = document.getElementById("sous-menu");
+
+        lienQuiSuisJe.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            event.stopPropagation();
+            var style = window.getComputedStyle(sousMenu);
+            var display = style.getPropertyValue("display");
+
+            if (display === "none") {
+            sousMenu.style.display = "block";
+            } else {
+            sousMenu.style.display = "none";
+            }
+        });
+        document.addEventListener("click", function(event) {
+    var estDansSousMenu = sousMenu.contains(event.target);
+    var estDansLienQuiSuisJe = lienQuiSuisJe.contains(event.target);
+
+    if (!estDansSousMenu && !estDansLienQuiSuisJe) {
+      sousMenu.style.display = "none";
+    }
+  });
+});
+    </script>
+    <script>
+                // Sélection du bouton de menu et du menu lui-même
+        const menuToggle = document.getElementById('menu-toggle-button');
+        const mainMenu = document.querySelector('.entete2');
+
+        // Ajout d'un écouteur d'événements pour le clic sur le bouton de menu
+        menuToggle.addEventListener('click', function() {
+            // Basculer la visibilité du menu en ajoutant ou en supprimant la classe 'active'
+            mainMenu.classList.toggle('active');
+
+            // Mettre à jour l'attribut aria-expanded pour indiquer l'état actuel du menu
+            const ariaExpanded = mainMenu.classList.contains('active') ? 'true' : 'false';
+            menuToggle.setAttribute('aria-expanded', ariaExpanded);
+        });
+
+        // Afficher le bouton de menu sur les écrans étroits et masquer sur les écrans larges
+        function toggleMobileMenu() {
+            if (window.innerWidth <= 768) {
+                // Afficher le bouton de menu
+                menuToggle.style.display = 'block';
+                // Masquer le menu
+                mainMenu.classList.remove('active');
+                // Mettre à jour l'attribut aria-expanded pour indiquer que le menu est masqué
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Masquer le bouton de menu
+                menuToggle.style.display = 'none';
+                // Afficher le menu
+                mainMenu.classList.add('active');
+                // Mettre à jour l'attribut aria-expanded pour indiquer que le menu est affiché
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Appeler la fonction pour initialiser l'état du menu
+        toggleMobileMenu();
+
+        // Ajouter un écouteur d'événements de redimensionnement de la fenêtre pour mettre à jour l'état du menu
+        window.addEventListener('resize', toggleMobileMenu);
+    </script> 
+</head>
+<body>
+    <div class="mobile-menu-toggle">
+        <button id="menu-toggle-button" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+<header id="entete1">
+    <a href="index.html"><img class="logo" src="D:\Audiobooks\Mon_site_Web\NR.png" title="Logo"></a>
+    <nav id="entete2" class="entete2">
+        <a class="entete" href="index.html">Accueil</a>
+        <a class="entete" href="blog.html">Blog</a>
+        <a class="entete" href="#" id="lien-qui-suis-je">Qui suis je?<span class="fleche">&#9660;</span></a>
+            <div id="sous-menu">
+                <a href="infopersonnel.html">Information personnelle</a>
+                <a href="parcours.html">Parcours</a>
+                <a href="experience.html">Expèriences</a>
+                <a href="competence.html">Compètences</a>
+                <a href="cv.html">Curriculum Vitae</a>
+            </div>
+        <a class="entete" href="contact.html">Contact</a>
+    </nav>
+    <nav id="reseau-sociaux">
+        <ul class="social-icons">
+            <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
+            <li><a class="lien-rs" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
+            <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
+            <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
+        </ul>
+    </nav>
+</header>
+<main class="accueil">
+    <h1>Merci pour la visite</h1>
+    <nav class="intro">
+        <img class="imgprofil1" src="D:\Audiobooks\Mon_site_Web\profil1.png" alt="Photo profil">
+        <div id="intro">
+            <h3>Bienvenue Dans mon Site Web - NIZAR SOILIHI</h3>
+            Bonjour et bienvenue sur mon site web personnel ! Je suis ravi de vous accueillir ici.
+
+            Je suis <strong>NIZAR SOILIHI</strong>, Etudiant en 2ème année de <strong>Génie Informatique</strong>.<br/>
+            Ce site est une vitrine de mon travail, de mes passions et de mon parcours. Que vous soyez ici par curiosité, pour explorer mes réalisations ou simplement pour en apprendre un peu plus sur moi.<br/>
+            Je vous invite à parcourir ces pages et à découvrir ce que je peux vous offrir.<br/>
+            Sur ce site, vous trouverez un mélange de contenu, allant de mon portfolio professionnel à mes réflexions personnelles sur des sujets qui me passionnent.<br/>
+            Je m'efforce de créer un espace où je peux partager mes expériences, mes connaissances et mes créations avec vous.<br/>
+            N'hésitez pas à explorer les différentes sections de mon site, à me contacter si vous avez des questions ou des projets sur lesquels vous aimeriez travailler ensemble. Je suis toujours ouvert aux nouvelles opportunités et aux collaborations enrichissantes.<br/>
+            Merci encore d'être passé(e) par ici. J'espère que vous trouverez votre visite agréable et inspirante !<br/><br/>
+            À votre succès.<br/><br/>
+        </div>
+    </nav>
+    <h2>A la Une</h2>
+    <div class="a-la-une">
+        <div class="bloc">
+            <a class="lien-bloc" href="#" target="_blank"><img src="https://t4.ftcdn.net/jpg/03/21/43/07/360_F_321430761_qQi0CU9tzI5w1k1vJgdA02LMtXtsXvJE.jpg" alt="Vers Instagram" title="Vers Instagram">
+            <p>Moi</p></a>
+        </div>
+        <div class="bloc">
+            <a class="lien-bloc" href="#" target="_blank"><img src="https://t4.ftcdn.net/jpg/03/21/43/07/360_F_321430761_qQi0CU9tzI5w1k1vJgdA02LMtXtsXvJE.jpg" alt="Vers Instagram" title="Vers Instagram">
+            <p>Chez moi</p></a>
+        </div>
+        <div class="bloc">
+            <a class="lien-bloc" href="#" target="_blank"><img src="https://t4.ftcdn.net/jpg/03/21/43/07/360_F_321430761_qQi0CU9tzI5w1k1vJgdA02LMtXtsXvJE.jpg" alt="Vers Instagram" title="Vers Instagram">
+            <p>Passion</p></a>
+        </div>
+    </div>
+    
+</main>
+</body>
+<footer>
+    <p>&copy; 2024, MAROC / BENI MELLAL<br/>Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024</p>
+</footer>
+</html>

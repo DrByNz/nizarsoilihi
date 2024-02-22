@@ -1,0 +1,322 @@
+@media (max-width: 768px) {
+    /* Lorsque la largeur de l'écran est inférieure ou égale à 768px (taille typique des appareils mobiles) */
+    .intro {
+        display: block; /* La section verticale est affichée verticalement */
+        width: 100%; /* Prend la pleine largeur de l'écran */
+    }
+}
+@keyframes rainbow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+body {
+    background-image: url("https://cdn.pixabay.com/photo/2021/11/14/20/08/background-6795624_960_720.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: aliceblue;
+    font-family: Arial, sans-serif;
+    margin-top: 100px;
+    padding: 0;
+    animation: rainbow 20s ease infinite;
+}
+.slideshow-container {
+    overflow: hidden;
+    position: relative;
+    width: 100%; 
+    height: 300px;
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+}
+.slide {
+    position: absolute; 
+    width: 100%; 
+    height: 500px; 
+    animation: slide 10s linear infinite; 
+}
+.slide img {
+    width: 60%; 
+    height: 500px; 
+}
+@keyframes slide {
+    0% { left: 100%; } 
+    100% { left: -100%; } 
+}
+.mobile-menu-toggle {
+    display: none;
+}
+#menu-toggle-button {
+    display: block;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#menu-toggle-button span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin-bottom: 5px;
+}
+.entete {
+    color: #c5e2f5;
+    text-decoration: none;
+    margin: 40px;
+    font-size: 17px;
+}
+#entete2 {
+    margin-top: 20px;
+}
+.entete:hover {
+    color: rgb(60, 146, 218);
+    transition: 0.3s;
+}
+#entete1 {
+    display: flex;
+    background-color: rgba(93, 129, 214, 0.329);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+.logo {
+    margin-left: 14px;
+    margin-top: 11px;
+    width: 40px;
+    height: 45px;
+}
+#icone-rs {
+    width: 20px;
+    width: 20px;
+}
+#icone-rs:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+.accueil h1 {
+    font-size: large;
+    text-align: center;
+    font-family: monospace;
+    color: rgb(154, 145, 175);
+}
+.social-icons li {
+    display: inline;
+    margin-left: 40px;
+    
+}
+#reseau-sociaux {
+    margin-left: 25%;
+    margin-top: 0%;
+}
+.fleche {
+    margin-left: 5px;
+  }
+  #sous-menu {
+    display: none;
+    position: absolute;
+    background-color: rgba(93, 129, 214, 0.589);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    padding: 10px;
+    border-radius: 12px;
+    top: calc(1OO + 5px);
+    margin-left: 21%;
+  }
+  #sous-menu a {
+    display: block;
+    padding: 5px 0;
+    text-decoration: none;
+    color: #cacbcc;
+  }
+  #sous-menu a:hover {
+    color: rgb(60, 146, 218);
+    transition: 0.3s;
+  }  
+.intro {
+    display: flex;
+    margin: 40px;
+}
+.imgprofil1 {
+    margin-top: 30px;
+    width: 30%;
+    height: 30%;
+    box-shadow: 0px 10px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+
+}
+#intro {
+    font-size: 85%;
+    margin: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #43455880;
+    padding: 12px;
+}
+.accueil h2 {
+    font-size: large;
+    text-align: center;
+    width: 100%;
+    background-color: #373b3f6b;
+    border-top-right-radius: 12px;
+    border-top-left-radius: 12px;
+    border-bottom: solid rgb(238, 233, 233);
+}
+
+footer {
+    text-align: center;
+    color: rgba(190, 192, 194, 0.575);
+    font-size: 70%;
+    border-top: solid rgb(91, 92, 102);
+    margin-top: 10%;
+    width: 100%;
+}
+.lien-bloc {
+    text-decoration: none;
+    color: antiquewhite;
+    text-align: center;
+    margin-top: 12px;
+}
+.a-la-une {
+    display: flex; 
+    justify-content: center; 
+}
+.bloc {
+    text-align: center;
+    margin: 0 10px;
+    margin-right: 100px;
+}
+.bloc img {
+    width: 100px; 
+    height: 100px; 
+    border-radius: 50%;
+}
+.bloc p {
+    margin-top: 5px; 
+    font-weight: bold; 
+}
+.imgprofil2 {
+    margin-left: 39%;
+    width: 20%;
+    height: 20%;
+    border-radius: 50%;
+}
+#contact h2 {
+    text-align: center;
+    font-family:monospace;
+}
+.coordonnees {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-right: 5%;
+    margin-left: 25%;
+    padding: 12px;
+    border: solid rgba(190, 192, 194, 0.26);
+    border-radius: 12px;
+    background-color: #22232e75;
+    display: block;
+}
+.coordonnees h3 {
+    text-align: center;
+}
+.coordonnees P {
+    font-size: 15px;
+    color: rgba(228, 229, 230, 0.719);
+}
+.coordonnee {
+    color: #cacbcc;
+}
+.co-logo {
+    width: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+.message {
+    width: 100%;
+    padding: 20px;
+    border-radius: 5px;
+    margin-left: 0%;
+  }
+  .champs-saisie {
+    margin-bottom: 20px;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    width: 150%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+  }
+  textarea {
+    resize: vertical;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+.contact {
+    display: flex;
+    margin-top: 6%;
+}
+.page-cv {
+    background-color: #cacbcc;
+    display: flex;
+    margin: 12px;
+}
+.cv-partie1 {
+    background-color: #393b3a;
+    padding: 12px;
+}
+.cv-partie2 {
+    padding: 12px;
+    color: #333;
+}
+.imgprofil3 {
+    margin-left: 39%;
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    border: solid #018574;
+}
+.page-cv h2 {
+    background-color: #018574;
+    color: #fff;
+    padding: 10px;
+}
+.page-cv li {
+    margin: 10px;
+}
+.cv-nom p {
+    color: #393b3a;
+    font-size: 20px;
+}
+.cv-nom h2 {
+    font-size: 50px;
+}
+.niv {
+    font-size: 12px;
+    color: #6dabee;
+}
+.download-cv {
+    text-decoration: none;
+    color: #ccc;
+}
+.download-cv:hover {
+    color: #01346b;
+}
+.telecharger-cv {
+    background-color: #018574;
+    padding: 15px;
+    border-radius: 30px;
+    margin-left: 83%;
+    margin-right: 20px;
+}

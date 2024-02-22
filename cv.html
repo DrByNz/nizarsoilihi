@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIZAR SOILIHI</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+            document.addEventListener("DOMContentLoaded", function() {
+        var lienQuiSuisJe = document.getElementById("lien-qui-suis-je");
+        var sousMenu = document.getElementById("sous-menu");
+
+        lienQuiSuisJe.addEventListener("click", function(event) {
+            event.preventDefault(); 
+            event.stopPropagation();
+            var style = window.getComputedStyle(sousMenu);
+            var display = style.getPropertyValue("display");
+
+            if (display === "none") {
+            sousMenu.style.display = "block";
+            } else {
+            sousMenu.style.display = "none";
+            }
+        });
+        document.addEventListener("click", function(event) {
+    var estDansSousMenu = sousMenu.contains(event.target);
+    var estDansLienQuiSuisJe = lienQuiSuisJe.contains(event.target);
+
+    if (!estDansSousMenu && !estDansLienQuiSuisJe) {
+      sousMenu.style.display = "none";
+    }
+  });
+});
+    </script>
+    <script>
+                // Sélection du bouton de menu et du menu lui-même
+        const menuToggle = document.getElementById('menu-toggle-button');
+        const mainMenu = document.querySelector('.entete2');
+
+        // Ajout d'un écouteur d'événements pour le clic sur le bouton de menu
+        menuToggle.addEventListener('click', function() {
+            // Basculer la visibilité du menu en ajoutant ou en supprimant la classe 'active'
+            mainMenu.classList.toggle('active');
+
+            // Mettre à jour l'attribut aria-expanded pour indiquer l'état actuel du menu
+            const ariaExpanded = mainMenu.classList.contains('active') ? 'true' : 'false';
+            menuToggle.setAttribute('aria-expanded', ariaExpanded);
+        });
+
+        // Afficher le bouton de menu sur les écrans étroits et masquer sur les écrans larges
+        function toggleMobileMenu() {
+            if (window.innerWidth <= 768) {
+                // Afficher le bouton de menu
+                menuToggle.style.display = 'block';
+                // Masquer le menu
+                mainMenu.classList.remove('active');
+                // Mettre à jour l'attribut aria-expanded pour indiquer que le menu est masqué
+                menuToggle.setAttribute('aria-expanded', 'false');
+            } else {
+                // Masquer le bouton de menu
+                menuToggle.style.display = 'none';
+                // Afficher le menu
+                mainMenu.classList.add('active');
+                // Mettre à jour l'attribut aria-expanded pour indiquer que le menu est affiché
+                menuToggle.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        // Appeler la fonction pour initialiser l'état du menu
+        toggleMobileMenu();
+
+        // Ajouter un écouteur d'événements de redimensionnement de la fenêtre pour mettre à jour l'état du menu
+        window.addEventListener('resize', toggleMobileMenu);
+    </script> 
+</head>
+<body>
+    <div class="mobile-menu-toggle">
+        <button id="menu-toggle-button" aria-label="Toggle Menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+<header id="entete1">
+    <a href="index.html"><img class="logo" src="D:\Audiobooks\Mon_site_Web\NR.png" title="Logo"></a>
+    <nav id="entete2" class="entete2">
+        <a class="entete" href="index.html">Accueil</a>
+        <a class="entete" href="blog.html">Blog</a>
+        <a class="entete" href="#" id="lien-qui-suis-je">Qui suis je?<span class="fleche">&#9660;</span></a>
+            <div id="sous-menu">
+                <a href="infopersonnel.html">Information personnelle</a>
+                <a href="parcours.html">Parcours</a>
+                <a href="experience.html">Expèriences</a>
+                <a href="competence.html">Compètences</a>
+                <a href="cv.html">Curriculum Vitae</a>
+            </div>
+        <a class="entete" href="contact.html">Contact</a>
+    </nav>
+    <nav id="reseau-sociaux">
+        <ul class="social-icons">
+            <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
+            <li><a class="lien-rs" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
+            <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
+            <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
+        </ul>
+    </nav>
+</header>
+<div class="page-cv">
+    <div class="cv-partie1">
+        <div class="header">
+            <img class="imgprofil3" src="https://scontent.fcmn2-1.fna.fbcdn.net/v/t39.30808-6/418830556_1423206128280871_9196697870480680937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3635dc&_nc_ohc=M2ChBD0QYTMAX8Wxy2-&_nc_ht=scontent.fcmn2-1.fna&oh=00_AfDKtMOwMVH7n40ulXaaS6GtvJXJGcwf1z0cSGM2SCX8Hw&oe=65D9277D" alt="Photo">
+        </div>
+        <div class="infoperso">
+            <h2>Coordonnées</h2>
+            <img class="co-logo" src="https://png.pngtree.com/png-vector/20191119/ourmid/pngtree-phone-icon-isolated-on-abstract-background-png-image_2001593.jpg" title="Téléphone"><strong class="coordonnee">+212 642 77 4321</strong><br/><br/>
+            <img class="co-logo" src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" title="Email"><strong class="coordonnee">soilihinizar04@gmail.com</strong><br/><br/>
+            <img class="co-logo" src="https://www.shutterstock.com/image-vector/pin-point-logo-can-be-600nw-1679653036.jpg" title="Adresse"><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong>
+        </div>
+        <div class="exp-pro">
+            <h2>Expérience Professionnelle</h2>
+            <ul>
+                <li>Certificat Low Code/Now Code</li>
+            </ul>
+        </div>
+        <div class="comp">
+            <h2>Compétences Informatiques</h2>
+            <ul>
+                <li>Word, Power Point</li>
+                <li>Développement Web</li>
+                <li>Bureautique</li>
+                <li>Infographie</li>
+                <li>Programmation en C</li>
+            </ul>
+        </div>
+        <div class="lang">
+            <h2>Connaissances linguistiques</h2>
+            <ul>
+                <li>Français</li>
+                <div class="niv">Maitise</div>
+                <li>Anglais</li>
+                <div class="niv">Niveau scolaire</div>
+                <li>Arabe</li>
+                <div class="niv">Niveau Scolaire</div>
+            </ul>
+        </div>
+    </div>
+    <div class="cv-partie2">
+        <div class="cv-nom">
+            <h2>NIZAR <br/>SOILIHI<br/><br/><p>ETUDIANT</p></h2>
+            
+        </div>
+        <p>Curieux, Motivé et Détérminé</p>
+        <div class="diplome">
+            <h2>Diplômes et Formations</h2>
+            <ul>
+                <li>Etude Universitaire<br/>Génie Informatique - École Supérieur de Technologie BENI MELLAL - 2023/2024</li>
+                <li>Etude Universitaire<br/>Mathématique, Informatique, Physique - Faculité de Sciences et Téchnique ERRACHIDIA - 2022/2023</li>
+                <li>Baccalauréat de l'enseignement secondaire(Série C/ Mention: Assez bien) - Lycée Scientifique Cheikh Hamdan Ben Rachid (COMORES) - 2021/2022</li>
+                <li>Brevet d'Etude du Premier Cycle (B.E.P.C): - Ecole Communautaire Mohammadiat (Irohé/COMORES) - 2018/2019</li>
+            </ul>
+        </div>
+        <div class="loisir">
+            <h2>Centre D'intêret</h2>
+            <ul>
+                <li>Intenet: Recherches, Réseaux sociaux</li>
+                <li>Cinéma: Science fiction</li>
+                <li>Voyager</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="telecharger-cv">
+    <a class="download-cv" href="D:\Audiobooks\Mon_site_Web\CV NIZAR SOILIHI.pdf" download="CV_NIZAR_SOILIHI.pdf">Télécharger le CV</a>
+</div>
+</body>
+<footer>
+    <p>&copy; 2024, MAROC / BENI MELLAL<br/> Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024</p>
+</footer>
+</html>
