@@ -207,7 +207,7 @@ footer {
 }
 .coordonnees {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-left: 20px;
+    margin-left: 12px;
     padding: 12px;
     border: solid rgba(190, 192, 194, 0.26);
     border-radius: 12px;
@@ -232,7 +232,7 @@ footer {
     margin-right: 30px;
 }
 .message {
-    width: 40%;
+    width: 30%;
     padding: 20px;
     border-radius: 5px;
     margin-left: 12px;
