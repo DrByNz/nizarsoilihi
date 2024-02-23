@@ -207,13 +207,13 @@ footer {
 }
 .coordonnees {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-right: 5%;
-    margin-left: 25%;
+    margin-left: 20px;
     padding: 12px;
     border: solid rgba(190, 192, 194, 0.26);
     border-radius: 12px;
     background-color: #22232e75;
     display: block;
+    width: 40%;
 }
 .coordonnees h3 {
     text-align: center;
@@ -232,10 +232,12 @@ footer {
     margin-right: 30px;
 }
 .message {
-    width: 100%;
+    width: 40%;
     padding: 20px;
     border-radius: 5px;
-    margin-left: 0%;
+    margin-left: 12px;
+    display: block;
+    background-color: #0057b32f;
   }
   .champs-saisie {
     margin-bottom: 20px;
@@ -244,7 +246,6 @@ footer {
   input[type="email"],
   input[type="tel"],
   textarea {
-    width: 150%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 12px;
