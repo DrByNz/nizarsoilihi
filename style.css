@@ -135,23 +135,23 @@ body {
     transition: 0.3s;
   }  
 .intro {
-    display: flex;
     margin: 40px;
 }
 .imgprofil1 {
-    margin-top: 30px;
+    margin: 30px;
     width: 30%;
     height: 30%;
     box-shadow: 0px 10px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-
+    float: left;
 }
 #intro {
     font-size: 85%;
-    margin: 30px;
+    margin-left: 4px;
     font-family: 'Courier New', Courier, monospace;
     background-color: #43455880;
     padding: 12px;
+    border-radius: 12px;
 }
 .accueil h2 {
     font-size: large;
@@ -212,8 +212,9 @@ footer {
     border: solid rgba(190, 192, 194, 0.26);
     border-radius: 12px;
     background-color: #22232e75;
-    display: block;
+    display: ;
     width: 40%;
+    float: left;
 }
 .coordonnees h3 {
     text-align: center;
@@ -232,11 +233,10 @@ footer {
     margin-right: 30px;
 }
 .message {
-    width: 40%;
+    margin-right: 20px;
     padding: 20px;
     border-radius: 5px;
-    margin-left: 20px;
-    display: block;
+    margin-left: 45%;
     background-color: #0057b32f;
   }
   .champs-saisie {
@@ -246,6 +246,7 @@ footer {
   input[type="email"],
   input[type="tel"],
   textarea {
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 12px;
@@ -265,7 +266,6 @@ footer {
     background-color: #0056b3;
   }
 .contact {
-    display: flex;
     margin-top: 6%;
 }
 .page-cv {
