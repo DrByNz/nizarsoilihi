@@ -215,6 +215,18 @@ body {
     padding: 12px;
     border-radius: 12px;
 }
+#toggleButton {
+    cursor: pointer;
+    color: rgb(52, 149, 228);
+}
+
+#toggleButton:hover {
+    text-decoration: underline;
+}
+
+#hiddenText {
+    display: none;
+}
 .accueil h2 {
     font-size: large;
     text-align: center;
