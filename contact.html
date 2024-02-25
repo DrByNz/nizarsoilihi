@@ -4,49 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIZAR SOILIHI</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" type="image/x-icon">
+    <link rel="icon" href="D:\Audiobooks\Mon_site_Web\NR.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script>
-            document.addEventListener("DOMContentLoaded", function() {
-        var lienQuiSuisJe = document.getElementById("lien-qui-suis-je");
-        var sousMenu = document.getElementById("sous-menu");
-
-        lienQuiSuisJe.addEventListener("click", function(event) {
-            event.preventDefault(); 
-            event.stopPropagation();
-            var style = window.getComputedStyle(sousMenu);
-            var display = style.getPropertyValue("display");
-
-            if (display === "none") {
-            sousMenu.style.display = "block";
-            } else {
-            sousMenu.style.display = "none";
-            }
-        });
-        document.addEventListener("click", function(event) {
-    var estDansSousMenu = sousMenu.contains(event.target);
-    var estDansLienQuiSuisJe = lienQuiSuisJe.contains(event.target);
-
-    if (!estDansSousMenu && !estDansLienQuiSuisJe) {
-    sousMenu.style.display = "none";
-    }
-    });
-    });
-</script> 
+        
+    </script>
+    <script>
+        function toggleMenu() {
+  var menu = document.querySelector('.entete2');
+  if (menu.style.display === 'none' || menu.style.display === '') {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
+}
+    </script>
 </head>
 <body>
-
+    
 <header id="entete1">
-    <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" title="Logo"></a>
-    <nav id="entete2">
+    <a href="index.html"><img class="logo" src="D:\Audiobooks\Mon_site_Web\NR.png" title="Logo"></a>
+    <nav id="entete2" class="entete2">
         <a class="entete" href="index.html">Accueil</a>
         <a class="entete" href="blog.html">Blog</a>
-        <a class="entete" href="#" id="lien-qui-suis-je">Qui suis je?<span class="fleche">&#9660;</span></a>
+        <input type="checkbox" id="toggle-menu">
+        <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
             <div id="sous-menu">
-                <a href="infopersonnel.html">Information personnel</a>
-                <a href="parcours.html">Parcours</a>
-                <a href="experience.html">Expèriences</a>
-                <a href="competence.html">Compètences</a>
+                <a href="infopersonnel.html">A-propos de moi</a>
                 <a href="cv.html">Curriculum Vitae</a>
             </div>
         <a class="entete" href="contact.html">Contact</a>
@@ -58,18 +42,32 @@
             <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
             <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
         </ul>
+        
     </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
 </header>
     <main id="contact">
     <h2>Pour me contacter</h2>
         <div class="contact">
             <div class="coordonnees">
-                <img class="imgprofil2" src="https://scontent.fcmn2-1.fna.fbcdn.net/v/t39.30808-6/418830556_1423206128280871_9196697870480680937_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=3635dc&_nc_ohc=M2ChBD0QYTMAX8Wxy2-&_nc_ht=scontent.fcmn2-1.fna&oh=00_AfDKtMOwMVH7n40ulXaaS6GtvJXJGcwf1z0cSGM2SCX8Hw&oe=65D9277D" alt="Photo profil">
+                <img class="imgprofil2" src="D:\Audiobooks\Mon_site_Web\nizar.png" alt="Photo profil">
                 <h3>NIZAR SOILIHI</h3>
                 <p>Pour me contacter rapidement, vous pouvez utiliser l'un de mes coordonnées ou m'envoyer un Email en remplisant ces champs</p>
                 <img class="co-logo" src="https://png.pngtree.com/png-vector/20191119/ourmid/pngtree-phone-icon-isolated-on-abstract-background-png-image_2001593.jpg" title="Téléphone"><strong class="coordonnee">+212 642 77 4321</strong><br/><br/>
                 <img class="co-logo" src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" title="Email"><strong class="coordonnee">soilihinizar04@gmail.com</strong><br/><br/>
                 <img class="co-logo" src="https://www.shutterstock.com/image-vector/pin-point-logo-can-be-600nw-1679653036.jpg" title="Adresse"><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong>
+                <nav class="reseau-sociaux">
+                    <ul id="social-icons">
+                        <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
+                        <li><a class="lien-rs" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
+                        <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
+                        <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
+                    </ul>
+                </nav>
             </div>
             <div class="message">
                 <form action="submit.php" method="POST">
@@ -87,7 +85,7 @@
                     </div>
                     <button type="submit">Envoyer</button>
                 </form>
-            </div>
+            </div>  
         </div>
     </main>
 </body>
