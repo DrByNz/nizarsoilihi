@@ -4,49 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIZAR SOILIHI</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" type="image/x-icon">
+    <link rel="icon" href="D:\Audiobooks\Mon_site_Web\NR.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
-    var lienQuiSuisJe = document.getElementById("lien-qui-suis-je");
-    var sousMenu = document.getElementById("sous-menu");
-
-    lienQuiSuisJe.addEventListener("click", function(event) {
-        event.preventDefault(); 
-        event.stopPropagation();
-        var style = window.getComputedStyle(sousMenu);
-        var display = style.getPropertyValue("display");
-
-        if (display === "none") {
-        sousMenu.style.display = "block";
-        } else {
-        sousMenu.style.display = "none";
-        }
-    });
-    document.addEventListener("click", function(event) {
-var estDansSousMenu = sousMenu.contains(event.target);
-var estDansLienQuiSuisJe = lienQuiSuisJe.contains(event.target);
-
-if (!estDansSousMenu && !estDansLienQuiSuisJe) {
-  sousMenu.style.display = "none";
+        
+    </script>
+    <script>
+        function toggleMenu() {
+  var menu = document.querySelector('.entete2');
+  if (menu.style.display === 'none' || menu.style.display === '') {
+    menu.style.display = 'block';
+  } else {
+    menu.style.display = 'none';
+  }
 }
-});
-});
-</script> 
+    </script>
 </head>
 <body>
-
+    
 <header id="entete1">
-    <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" title="Logo"></a>
-    <nav id="entete2">
+    <a href="index.html"><img class="logo" src="D:\Audiobooks\Mon_site_Web\NR.png" title="Logo"></a>
+    <nav id="entete2" class="entete2">
         <a class="entete" href="index.html">Accueil</a>
         <a class="entete" href="blog.html">Blog</a>
-        <a class="entete" href="#" id="lien-qui-suis-je">Qui suis je?<span class="fleche">&#9660;</span></a>
+        <input type="checkbox" id="toggle-menu">
+        <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
             <div id="sous-menu">
-                <a href="infopersonnel.html">Information personnel</a>
-                <a href="parcours.html">Parcours</a>
-                <a href="experience.html">Expèriences</a>
-                <a href="competence.html">Compètences</a>
+                <a href="infopersonnel.html">A-propos de moi</a>
                 <a href="cv.html">Curriculum Vitae</a>
             </div>
         <a class="entete" href="contact.html">Contact</a>
@@ -58,7 +42,13 @@ if (!estDansSousMenu && !estDansLienQuiSuisJe) {
             <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
             <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
         </ul>
+        
     </nav>
+    <div class="menu-toggle" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
 </header>
 </body>
 <footer>
