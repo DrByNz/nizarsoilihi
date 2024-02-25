@@ -1,8 +1,63 @@
-@media (max-width: 768px) {
-    /* Lorsque la largeur de l'écran est inférieure ou égale à 768px (taille typique des appareils mobiles) */
+@media only screen and (max-width: 600px) {
+    .menu-toggle {
+      display: inline;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      margin-right: 12px;
+      margin-top: 15px; 
+    }
+    #reseau-sociaux {
+        display: none;
+    }
+    #sous-menu {
+        align-items: center;
+        display: none;
+        background-color: rgba(93, 129, 214, 0.589);
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        padding: 10px;
+        border-radius: 12px;
+    }
+    .entete2 a {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .reseau-sociaux {
+        margin-top: 0%;
+        align-items:flex-end;
+        display: inline;
+    }
     .intro {
-        display: block; /* La section verticale est affichée verticalement */
-        width: 100%; /* Prend la pleine largeur de l'écran */
+        margin: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .a-la-une {
+        flex-direction: column; 
+        justify-content: center; 
+    }
+    .contact {
+        margin-top: 5%;
+        flex-direction:column;
+        align-items: center;
+    }
+    .message {
+        margin: 0%;
+        padding: 20px;
+        border-radius: 5px;
+      }
+    .bar {
+        width: 100%;
+        height: 3px;
+        background-color: #c5e2f5;
+        margin: 5px 0;
+      }
+    .entete2 {
+      display: none; /* Cacher le menu par défaut sur les appareils mobiles */
+    }
+    body {
+        display: block;
     }
 }
 @keyframes rainbow {
@@ -40,29 +95,18 @@ body {
 @keyframes slide {
     0% { left: 100%; } 
     100% { left: -100%; } 
-}
-.mobile-menu-toggle {
-    display: none;
-}
-#menu-toggle-button {
-    display: block;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 10px;
-}
-
-#menu-toggle-button span {
-    display: block;
-    width: 25px;
+}  
+  .bar {
+    width: 100%;
     height: 3px;
-    background-color: #333;
-    margin-bottom: 5px;
-}
+    background-color: #c5e2f5;
+    margin: 5px 0;
+  }  
 .entete {
     color: #c5e2f5;
     text-decoration: none;
     margin: 40px;
+    margin-right: 0%;
     font-size: 17px;
 }
 #entete2 {
@@ -73,7 +117,8 @@ body {
     transition: 0.3s;
 }
 #entete1 {
-    display: flex;
+    display: inline-flex;
+    justify-content: space-between;
     background-color: rgba(93, 129, 214, 0.329);
     box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.5);
     z-index: 1000;
@@ -87,6 +132,7 @@ body {
     margin-top: 11px;
     width: 40px;
     height: 45px;
+    float: left;
 }
 #icone-rs {
     width: 20px;
@@ -102,27 +148,36 @@ body {
     font-family: monospace;
     color: rgb(154, 145, 175);
 }
+.social-icons {
+    display: flex;
+    margin-right: 10px;
+}
 .social-icons li {
-    display: inline;
+    list-style: none;
     margin-left: 40px;
-    
 }
 #reseau-sociaux {
-    margin-left: 25%;
     margin-top: 0%;
+    align-items:flex-end;
+}
+#social-icons li {
+    display: inline;
+    
+}
+.reseau-sociaux {
+    align-items: flex-start;
 }
 .fleche {
     margin-left: 5px;
   }
   #sous-menu {
-    display: none;
     position: absolute;
+    display: none;
     background-color: rgba(93, 129, 214, 0.589);
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     padding: 10px;
     border-radius: 12px;
-    top: calc(1OO + 5px);
-    margin-left: 21%;
+    margin-left: 15%;
   }
   #sous-menu a {
     display: block;
@@ -133,9 +188,17 @@ body {
   #sous-menu a:hover {
     color: rgb(60, 146, 218);
     transition: 0.3s;
-  }  
+  }
+  #toggle-menu {
+    display: none; /* Cache la case à cocher */
+  }
+  /* Affiche le sous-menu lorsque la case à cocher est cochée */
+  #toggle-menu:checked + .entete + #sous-menu {
+    display: block;
+  }    
 .intro {
-    margin: 40px;
+    margin: 20px;
+    display: flex;
 }
 .imgprofil1 {
     margin: 30px;
@@ -143,7 +206,6 @@ body {
     height: 30%;
     box-shadow: 0px 10px 5px 10px rgba(0, 0, 0, 0.5);
     border-radius: 50%;
-    float: left;
 }
 #intro {
     font-size: 85%;
@@ -169,31 +231,34 @@ footer {
     font-size: 70%;
     border-top: solid rgb(91, 92, 102);
     margin-top: 10%;
-    width: 100%;
-}
-.lien-bloc {
-    text-decoration: none;
-    color: antiquewhite;
-    text-align: center;
-    margin-top: 12px;
 }
 .a-la-une {
     display: flex; 
-    justify-content: center; 
+    justify-content: space-between; 
 }
 .bloc {
+    max-width: 350px;
     text-align: center;
-    margin: 0 10px;
-    margin-right: 100px;
+    text-decoration: none;
+    color: antiquewhite;
+    text-align: center;
+    margin: 12px;
+    background-color: #6d757a41;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+    
 }
 .bloc img {
-    width: 100px; 
-    height: 100px; 
-    border-radius: 50%;
+    max-width: 100%; 
+    max-height: 300px; 
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 .bloc p {
-    margin-top: 5px; 
-    font-weight: bold; 
+    margin-top: 0%;
+    padding: 10px;
+    
 }
 .imgprofil2 {
     margin-left: 39%;
@@ -207,13 +272,11 @@ footer {
 }
 .coordonnees {
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 20px;
     padding: 12px;
     border: solid rgba(190, 192, 194, 0.26);
     border-radius: 12px;
     background-color: #22232e75;
-    max-width: 500px;
-    float: left;
+    max-width: 40%;
 }
 .coordonnees h3 {
     text-align: center;
@@ -232,12 +295,11 @@ footer {
     margin-right: 30px;
 }
 .message {
-    position:relative;
+    margin: 12px;
+    width: 50%;
     margin-top: 0%;
-    margin-right: 20px;
     padding: 20px;
     border-radius: 5px;
-    margin-left: 10%;
   }
   .champs-saisie {
     margin-bottom: 20px;
@@ -246,7 +308,7 @@ footer {
   input[type="email"],
   input[type="tel"],
   textarea {
-    width: 60%;
+    width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 12px;
@@ -267,19 +329,26 @@ footer {
   }
 .contact {
     margin-top: 5%;
+    display: flex;
+    justify-content: space-between;
 }
 .page-cv {
     background-color: #cacbcc;
     display: flex;
-    margin: 12px;
+    justify-content: center;
+    font-size: 15px;
 }
 .cv-partie1 {
     background-color: #393b3a;
     padding: 12px;
+    width: 50%;
+    display: block;
 }
 .cv-partie2 {
     padding: 12px;
     color: #333;
+    background-color: #cacbcc;
+    width: 50%;
 }
 .imgprofil3 {
     margin-left: 39%;
@@ -313,11 +382,13 @@ footer {
 }
 .download-cv:hover {
     color: #01346b;
+    padding: 15px;
 }
 .telecharger-cv {
     background-color: #018574;
-    padding: 15px;
     border-radius: 30px;
-    margin-left: 83%;
-    margin-right: 20px;
+    margin: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
 }
