@@ -276,7 +276,7 @@ footer {
     border: solid rgba(190, 192, 194, 0.26);
     border-radius: 12px;
     background-color: #22232e75;
-    max-width: 40%;
+    max-width: 100%;
 }
 .coordonnees h3 {
     text-align: center;
@@ -296,7 +296,7 @@ footer {
 }
 .message {
     margin: 12px;
-    width: 50%;
+    width: 95%;
     margin-top: 0%;
     padding: 20px;
     border-radius: 5px;
@@ -308,7 +308,7 @@ footer {
   input[type="email"],
   input[type="tel"],
   textarea {
-    width: 100%;
+    width: 95%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 12px;
