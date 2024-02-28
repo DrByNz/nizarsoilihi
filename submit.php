@@ -7,7 +7,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $message = $_POST['message'];
 
     // Construction du message e-mail
-    $to = "soilihinizar04@email.com";
+    $to = "infosastuce78@gmail.com";
     $subject = "Nouveau message de contact";
     $email_body = "Nom/prénom: $name\n";
     $email_body .= "Adresse Email: $email\n";
