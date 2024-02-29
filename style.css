@@ -397,6 +397,14 @@ footer {
     height: 200px;
     border-radius: 12px;
 }
+.voir-cv {
+    text-decoration: none;
+    color: #5ca7f8;
+}
+.voir-cv:hover{
+    color: #0056b3;
+    transition: color 0.3s;
+}
 .page-cv {
     background-color: #cacbcc;
     display: flex;
