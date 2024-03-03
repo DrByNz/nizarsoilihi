@@ -115,14 +115,12 @@ body {
     margin: 5px 0;
   }  
 .entete {
-    color: #c5e2f5;
+    color: #e0f0fa;
     text-decoration: none;
     margin: 40px;
     margin-right: 0%;
     font-size: 17px;
-}
-#entete2 {
-    margin-top: 20px;
+    font-weight: bold;
 }
 .entete:hover {
     color: rgb(60, 146, 218);
