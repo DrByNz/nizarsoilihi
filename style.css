@@ -267,8 +267,9 @@ footer {
     color: antiquewhite;
     text-align: center;
     margin: 12px;
-    background-color: #6d757a41;
+    background-color: #23127041;
     border-radius: 20px;
+    box-shadow: 0px 5px 5px 5px rgba(0, 0, 0, 0.349);
 
     
 }
