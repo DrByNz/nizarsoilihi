@@ -355,7 +355,7 @@ footer {
     border-radius: 12px;
   }
   textarea {
-    resize: vertical;
+    resize: both;
   }
   button {
     background-color: #007bff;
