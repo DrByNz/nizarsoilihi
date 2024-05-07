@@ -50,7 +50,70 @@
         <div class="bar"></div>
       </div>
 </header>
-<center><p>Cette partie est pour le moment en cours de créations</p><br/>Merci de revenir plus tard!</center>
+<div class="couv">
+    <div class="couv1">
+        <P>Mon blog</P> 
+    </div>
+    <a href="https://www.youtube.com/@DreamBoyNz/videos">
+        <i class="fab fa-youtube"></i>Chaîne YouTube
+    </a>
+</div>   
+<div class="head-blog">
+        <div class="barre-recherche">
+            <!-- Formulaire de recherche -->
+            <form action="#" method="GET" id="formulaire-recherche">
+                <input type="search" name="q" placeholder="Rechercher...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </form>
+        </div>
+    </div>
+    <div class="conteneur">
+        <h2>Vidéos</h2>
+        <center><p>Rien pour le moment!</p></center>
+        </div>
+        <span id="afficheshort" onclick="authershort()">Affiche plus</span>     
+        <div class="images" id="images">
+            <!-- Insérez vos images ici -->
+            <h2>Images</h2>
+        <center><p>Rien pour le moment!</p></center>
+        </div>
+    </div>
+<script>
+const arrows = document.querySelectorAll('.arrow');
+
+arrows.forEach((arrow, index) => {
+  arrow.addEventListener('click', () => {
+    const currentSlide = document.querySelector('.video-short.active');
+    const nextSlide = currentSlide.nextElementSibling || document.querySelector('.video-short:first-child');
+    const currentArrow = arrow.previousElementSibling || document.querySelector('.arrow:last-child');
+    const nextArrow = currentArrow.nextElementSibling || document.querySelector('.arrow:first-child');
+
+    currentSlide.classList.remove('active');
+    nextSlide.classList.add('active');
+
+    currentArrow.classList.remove('active');
+    nextArrow.classList.add('active');
+  });
+});
+</script>
+<script>
+    function authershort() {
+    var authershort = document.getElementById("authershort");
+    var afficheshort = document.getElementById("afficheshort");
+
+    var computedStyle = window.getComputedStyle(authershort);
+    var displayStyle = authershort.style.display || computedStyle.getPropertyValue("display");
+
+    if (displayStyle === "none") {
+        authershort.style.display = "grid";
+        authershort.style.gridTemplateColumns = "repeat(auto-fit, minmax(300px, 1fr))";
+        afficheshort.textContent = "Afficher moins";
+    } else {
+        authershort.style.display = "none";
+        afficheshort.textContent = "Afficher plus";
+    }
+}
+</script>
 </body>
 <footer>
     <p>&copy; 2024, MAROC | BENI MELLAL<br/> Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024</p>
