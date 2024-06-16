@@ -4,12 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIZAR SOILIHI</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <script>
-        
-    </script>
     <script>
         function toggleMenu() {
   var menu = document.querySelector('.entete2');
@@ -23,34 +20,33 @@
 </head>
 <body>
     
-<header id="entete1">
-    <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" title="Logo"></a>
-    <nav id="entete2" class="entete2">
-        <a class="entete" href="index.html">Accueil</a>
-        <a class="entete" href="blog.html">Blog</a>
-        <input type="checkbox" id="toggle-menu">
-        <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
-            <div id="sous-menu">
-                <a href="infopersonnel.html">A-propos de moi</a>
-                <a href="cv.html">Curriculum Vitae</a>
-            </div>
-        <a class="entete" href="contact.html">Contact</a>
-    </nav>
-    <nav id="reseau-sociaux">
-        <ul class="social-icons">
-            <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+212642774321" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
-            <li><a class="lien-rs" href="https://www.facebook.com/nizar.s00" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
-            <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
-            <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
-        </ul>
-        
-    </nav>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-</header>
+    <header id="entete1">
+        <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" title="Logo"></a>
+        <nav id="entete2" class="entete2">
+            <a class="entete" href="index.html">Accueil</a>
+            <a class="entete" href="blog.html">Blog</a>
+            <input type="checkbox" id="toggle-menu">
+            <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
+                <div id="sous-menu">
+                    <a href="infopersonnel.html">A-propos de moi</a>
+                    <a href="cv.html">Curriculum Vitae</a>
+                </div>
+            <a class="entete" href="contact.html">Contact</a>
+        </nav>
+        <nav id="reseau-sociaux">
+            <ul class="social-icons">
+                <li><a class="icon-wap" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a class="icon-fb" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="icon-insta" href="https://www.instagram.com/nizar.s00/" title="Mon Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="icon-teleg" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><i class="fab fa-telegram"></i></a></li>
+            </ul>   
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </header>
 <div class="couv">
     <div class="couv1">
         <P>Mon blog</P> 
@@ -58,64 +54,4 @@
     <a href="https://www.youtube.com/@DreamBoyNz/videos">
         <i class="fab fa-youtube"></i>Chaîne YouTube
     </a>
-</div>   
-<div class="head-blog">
-        <div class="barre-recherche">
-            <!-- Formulaire de recherche -->
-            <form action="#" method="GET" id="formulaire-recherche">
-                <input type="search" name="q" placeholder="Rechercher...">
-                <button type="submit"><i class="fas fa-search"></i></button>
-            </form>
-        </div>
-    </div>
-    <div class="conteneur">
-        <h2>Vidéos</h2>
-        <center><p>Rien pour le moment!</p></center>
-        </div>     
-        <div class="images" id="images">
-            <!-- Insérez vos images ici -->
-            <h2>Images</h2>
-        <center><p>Rien pour le moment!</p></center>
-        </div>
-    </div>
-<script>
-const arrows = document.querySelectorAll('.arrow');
-
-arrows.forEach((arrow, index) => {
-  arrow.addEventListener('click', () => {
-    const currentSlide = document.querySelector('.video-short.active');
-    const nextSlide = currentSlide.nextElementSibling || document.querySelector('.video-short:first-child');
-    const currentArrow = arrow.previousElementSibling || document.querySelector('.arrow:last-child');
-    const nextArrow = currentArrow.nextElementSibling || document.querySelector('.arrow:first-child');
-
-    currentSlide.classList.remove('active');
-    nextSlide.classList.add('active');
-
-    currentArrow.classList.remove('active');
-    nextArrow.classList.add('active');
-  });
-});
-</script>
-<script>
-    function authershort() {
-    var authershort = document.getElementById("authershort");
-    var afficheshort = document.getElementById("afficheshort");
-
-    var computedStyle = window.getComputedStyle(authershort);
-    var displayStyle = authershort.style.display || computedStyle.getPropertyValue("display");
-
-    if (displayStyle === "none") {
-        authershort.style.display = "grid";
-        authershort.style.gridTemplateColumns = "repeat(auto-fit, minmax(300px, 1fr))";
-        afficheshort.textContent = "Afficher moins";
-    } else {
-        authershort.style.display = "none";
-        afficheshort.textContent = "Afficher plus";
-    }
-}
-</script>
-</body>
-<footer>
-    <p>&copy; 2024, MAROC | BENI MELLAL<br/> Ceci est un site personnel developpé par NIZAR SOILIIHI<br/>19/02/2024</p>
-</footer>
-</html>
+</div>
