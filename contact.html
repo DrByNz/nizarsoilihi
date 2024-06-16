@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NIZAR SOILIHI</title>
-    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <script>
         function toggleMenu() {
@@ -19,56 +20,66 @@
 </head>
 <body>
     
-<header id="entete1">
-    <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR.png" title="Logo"></a>
-    <nav id="entete2" class="entete2">
-        <a class="entete" href="index.html">Accueil</a>
-        <a class="entete" href="blog.html">Blog</a>
-        <input type="checkbox" id="toggle-menu">
-        <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
-            <div id="sous-menu">
-                <a href="infopersonnel.html">A-propos de moi</a>
-                <a href="cv.html">Curriculum Vitae</a>
-            </div>
-        <a class="entete" href="contact.html">Contact</a>
-    </nav>
-    <nav id="reseau-sociaux">
-        <ul class="social-icons">
-            <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+212642774321" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
-            <li><a class="lien-rs" href="https://www.facebook.com/nizar.s00" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
-            <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
-            <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
-        </ul>
-        
-    </nav>
-    <div class="menu-toggle" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-</header>
+    <header id="entete1">
+        <a href="index.html"><img class="logo" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/NR0.png" title="Logo"></a>
+        <nav id="entete2" class="entete2">
+            <a class="entete" href="index.html">Accueil</a>
+            <a class="entete" href="blog.html">Blog</a>
+            <input type="checkbox" id="toggle-menu">
+            <label class="entete" for="toggle-menu">Qui suis je?<span class="fleche">&#9660;</span></label>
+                <div id="sous-menu">
+                    <a href="infopersonnel.html">A-propos de moi</a>
+                    <a href="cv.html">Curriculum Vitae</a>
+                </div>
+            <a class="entete" href="contact.html">Contact</a>
+        </nav>
+        <nav id="reseau-sociaux">
+            <ul class="social-icons">
+                <li><a class="icon-wap" href="https://api.whatsapp.com/send?phone=+2693526100" title="Mon WhatsApp" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
+                <li><a class="icon-fb" href="https://www.facebook.com/nizar.soilihi.7" title="Mon Facebook" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                <li><a class="icon-insta" href="https://www.instagram.com/nizar.s00/" title="Mon Instagram" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="icon-teleg" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><i class="fab fa-telegram"></i></a></li>
+            </ul>   
+        </nav>
+        <div class="menu-toggle" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+          </div>
+    </header>
 <div class="cover">
     <P>Contact</P> 
 </div>
     <main id="contact">
-        <div class="contact">
+        <div class="contact" id="float">
             <div class="coordonnees">
-                <img class="imgprofil2" src="https://raw.githubusercontent.com/DrByNz/nizarsoilihi/main/nizar.png" alt="Photo profil">
+                <div class="imgprofil2">
+                    <i class="fas fa-address-book contact-icon"></i>
+                </div>
                 <h3>NIZAR SOILIHI</h3>
                 <p>Pour me contacter rapidement, vous pouvez utiliser l'un de mes coordonnées ou m'envoyer un Email en remplisant ces champs</p>
-                <img class="co-logo" src="https://png.pngtree.com/png-vector/20191119/ourmid/pngtree-phone-icon-isolated-on-abstract-background-png-image_2001593.jpg" title="Téléphone"><strong class="coordonnee">+212 642 77 4321</strong><br/><br/>
-                <img class="co-logo" src="https://seeklogo.com/images/G/gmail-new-2020-logo-32DBE11BB4-seeklogo.com.png" title="Email"><strong class="coordonnee">soilihinizar04@gmail.com</strong><br/><br/>
-                <img class="co-logo" src="https://www.shutterstock.com/image-vector/pin-point-logo-can-be-600nw-1679653036.jpg" title="Adresse"><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong>
-                <nav class="reseau-sociaux">
-                    <ul id="social-icons">
-                        <li><a class="lien-rs" href="https://api.whatsapp.com/send?phone=+212642774321" title="Mon WhatsApp" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-whatsapp-phone-icon-png-image_6315989.png" alt="WhatsApp"></a></li>
-                        <li><a class="lien-rs" href="https://www.facebook.com/nizar.s00" title="Mon Facebook" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/2021_Facebook_icon.svg/512px-2021_Facebook_icon.svg.png" alt="Facebook"></a></li>
-                        <li><a class="lien-rs" href="https://www.instagram.com/nizar.s00/" title="Mon instagram" target="_blank"><img id="icone-rs" src="https://png.pngtree.com/png-vector/20221018/ourmid/pngtree-instagram-icon-png-image_6315974.png" alt="Instagram"></a></li>
-                        <li><a class="lien-rs" href="https://t.me/drbynz" title="Mon Telegram" target="_blank"><img id="icone-rs" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/512px-Telegram_logo.svg.png" alt="Telegram"></a></li>
-                    </ul>
+                <div class="co-logo">
+                    <span class="phone"><i class="fas fa-phone"></i></span><strong class="coordonnee">+212 642 77 4321</strong><br/><br/>
+                    <span class="envelope"><i class="fas fa-envelope"></i></span><strong class="coordonnee">soilihinizar04@gmail.com</strong><br/><br/>
+                    <span class="map"><i class="fas fa-map-marker-alt"></i></span><strong class="coordonnee">Maroc / Ben Millal-Atlas</strong>
+                </div>
+                <nav class="contact-icon-res">
+                    <a class="icon-fb" href="https://www.facebook.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a class="icon-wap" href="https://api.whatsapp.com/send?phone=+212642774321" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </li>
+                    <a class="icon-insta" href="https://www.instagram.com/nizar.s00" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="icon-teleg" href="https://t.me/drbynz" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-telegram"></i>
+                    </a>
                 </nav>
             </div>
             <div class="message">
+                <h2>Laissez-moi un message</h2>
                 <form action="https://formspree.io/f/mbjnyayd" method="POST">
                     <div class="champs-saisie">
                     <input type="text" id="name" name="name" placeholder="Nom/prénom" required>
@@ -80,7 +91,7 @@
                     <input type="tel" id="phone" placeholder="Téléphone" name="phone">
                     </div>
                     <div class="champs-saisie">
-                    <textarea id="message" placeholder="Ecrire un message" name="message" rows="4" required></textarea>
+                    <textarea type="text" id="message" placeholder="Ecrire un message" name="message" rows="2" required></textarea>
                     </div>
                     <button type="submit">Envoyer</button>
                 </form>
