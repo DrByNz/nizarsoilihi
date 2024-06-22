@@ -239,6 +239,7 @@ body {
 .cover {
     position: relative;
     background-image: url('https://www.shutterstock.com/image-photo/man-using-laptop-computer-working-600nw-721758364.jpg');
+    background-size: cover;
     padding: 100px;
     padding-top: 115px;
     max-width: 100%;
